@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stands",
+  "info": {
+    "singularName": "stand",
+    "pluralName": "stands",
+    "displayName": "Stand"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "passages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::passage.passage",
+      "mappedBy": "stand"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "stands"
+    }
+  }
+}

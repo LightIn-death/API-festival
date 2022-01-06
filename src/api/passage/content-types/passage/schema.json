@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "passages",
+  "info": {
+    "singularName": "passage",
+    "pluralName": "passages",
+    "displayName": "Passage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "artiste": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::artiste.artiste",
+      "inversedBy": "passages"
+    },
+    "stand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::stand.stand",
+      "inversedBy": "passages"
+    },
+    "start": {
+      "type": "datetime"
+    },
+    "end": {
+      "type": "datetime"
+    }
+  }
+}
